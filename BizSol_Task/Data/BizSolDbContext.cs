@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BizSol_Task.Entitties;
+using Microsoft.EntityFrameworkCore;
 
 namespace BizSol_Task.Data;
 
@@ -9,4 +10,5 @@ public class BizSolDbContext : DbContext
     {
 
     }
+    public DbSet<User> Users { get; set; }
 }

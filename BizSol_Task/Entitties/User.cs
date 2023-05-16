@@ -13,5 +13,7 @@ public class User
     [MaxLength(50)]
     public string phone { get; set; }
     public string imgUrl { get; set; }
-    public bool status { get; set; }
+    public DateTime dateCreated { get; set; }
+    public DateTime dateUpdated { get; set; }
+
 }
