@@ -1,4 +1,5 @@
 using BizSol_Task.Data;
+using BizSol_Task.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 //register dbcontext
 builder.Services.AddDbContext<BizSolDbContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection")));
+builder.Services.AddTransient<IUserService,UserService>();
 var app = builder.Build();
 
 //Configure the HTTP request pipeline.

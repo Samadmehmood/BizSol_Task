@@ -26,7 +26,7 @@ class UserService : IUserService
         return result;
     }
 
-    public async Task<ResponseDto<List<User>>> Search(searchRequestDto input)
+    public async Task<ResponseDto<List<User>>> Search(SearchRequestDto input)
     {
         var searchQuery = input.query;
         var result = new ResponseDto<List<User>>();

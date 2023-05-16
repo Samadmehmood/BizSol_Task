@@ -5,7 +5,7 @@ public class IdRequestDto
     public int id { get; set; }
 }
 
-public class searchRequestDto
+public class SearchRequestDto
 {
     public string query { get; set; }
 }
